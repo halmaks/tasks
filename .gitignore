@@ -1,7 +1,10 @@
 
 
+*.class
+*.jar
+
 # Intellij
-./idea/
+.idea/
 *.iml
 *.iws
 

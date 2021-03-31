@@ -1,6 +1,22 @@
 package com.halmaks.tasks;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class TwoSum {
+
+    public static int[] searchTwoSumWithLineTime(int[] nums, int targetSum) {
+
+        Set<Integer> tmp = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (tmp.contains(targetSum - nums[i])) {
+                return new int[]{targetSum - nums[i], nums[i]};
+            }
+            tmp.add(nums[i]);
+        }
+
+        return new int[]{};
+    }
 
     public static int[] searchTwoSum(int[] nums, int targetSum) {
 
